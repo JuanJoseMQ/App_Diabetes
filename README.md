@@ -17,7 +17,7 @@ Para utilizar la app, hay que ejecutar el app_diabetes.py desde la terminal de p
 
 - 1º Si no tenemos instalada la libreria Streamlit --> pip install streamlit
 - 2º Una vez instalado, accedemos a la carpeta donde reside el app_diabetes.py que vamos a ejecutar
-- 3º Usamos el comando --> run streamlit app_diabetes.py
+- 3º Usamos el comando --> streamlit run app_diabetes.py
 - 4º Esto nos abrirá una host en la web y ya podremos interactuar con la app
 
 Introduce los párametros deseados y comprueba si deberias cuidar un poco mas tu salud, o por el contrario todo va bien.

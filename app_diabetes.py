@@ -91,6 +91,8 @@ def train_and_predict_model(df, test_size, selected_model, input_data):
 	  'Prob()': [max_prob],
 	  'Accuracy': [acc],
 	  "Precisión": [prc],
+	  'Recall': [rec],
+	  'F1': [f1],
 	  "TP": [tp],
 	  "TN": [tn],
 	  "FP": [fp],
@@ -192,7 +194,7 @@ if btn_predict:
 	st.table(sub_df)
 
 	st.subheader("Métricas")
-	met_df = model_stats[['Modelo', 'Accuracy', 'Precisión', "Tiempo Entrenamiento", "Tiempo Testeo"]]
+	met_df = model_stats[['Modelo', 'Accuracy', 'Precisión','Recall','F1', "Tiempo Entrenamiento", "Tiempo Testeo"]]
 	st.table(met_df)
 
 	st.subheader("Matriz de confusión - set de entrenamiento")
@@ -213,4 +215,5 @@ if btn_predict:
 	datos_para_hist = df['Age']
 	datos_para_hist.hist()
 	plt.show()
-	st.pyplot()
+	st.set_option('deprecation.showPyplotGlobalUse', False)
+
